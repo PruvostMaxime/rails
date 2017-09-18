@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170915094157) do
+ActiveRecord::Schema.define(version: 20170915092027) do
 
   create_table "articles", force: :cascade do |t|
     t.string "titre"
     t.string "description"
     t.text "contenu"
-    t.text "auteur"
+    t.string "auteur"
   end
 
 end
