@@ -1,0 +1,14 @@
+<h1>Liste de tous nos articles</h1>
+
+<% @articles.each do |article| %>
+
+  <h2>Titre de l'article : <%= article.titre %></h2>
+  <p>Description:<%= article.description%></p>
+  <p> Article ecrit par : <%= article.auteur%></p>
+  <%= link_to "Lire l'article", show_article_path(article), class: "btn btn-primary" %>
+  <%= link_to "Modifier l'article", edit_article_path(article), class: "btn btn-secondary" %>
+  <%= link_to "Supprimer l'article", destroy_article_path(article), class: "btn btn-danger", method: :delete ,data:{confirm: "Etes vous sur ?"} %>
+
+
+
+<% end %>
